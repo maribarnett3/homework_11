@@ -2,16 +2,16 @@
 
 <ul>
   {{#each burgers}}
-  {{#unless (devoured==1)}}
-  {{> burgers/burger-block devoured=false}}
+  {{#unless devoured}}
+  {{> burgers/burger-block devour=false}}
   {{/unless}}
   {{/each}}
 </ul>
 
 <ul>
   {{#each burgers}}
-  {{#if (devoured==1)}}
-  {{> burgers/burger-block devoured=true}}
+  {{#if devoured}}
+  {{> burgers/burger-block devour=true}}
   {{/if}}
   {{/each}}
 </ul>
